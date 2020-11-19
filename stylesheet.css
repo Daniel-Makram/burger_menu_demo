@@ -1,0 +1,135 @@
+ul{
+    list-style: none;
+}
+a{
+    color: white;
+    text-decoration: none;
+}
+
+.header--img {
+    background-image: url(img/header_Background.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 100%;
+    padding-top: 33.68%;
+    position: relative;
+}
+
+.header__nav--container {
+    position: absolute;
+    top: 5%;
+    left: 40%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+}
+
+ul {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+    margin: 0;
+    
+}
+ul a {
+    margin-right: 4%;
+}
+ul a:hover {
+    color: rgb(187, 184, 184);
+}
+ul li {
+    font-size: 1.5em;
+    font-weight: bold;
+    font-family: 'Roboto', sans-serif;
+}
+
+h1{
+    font-family: 'Roboto', sans-serif;
+    color: white;
+    position: absolute;
+    top: 16%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.burger {
+    display: none;
+}
+
+@media screen and (max-width:829px) {
+    .header__nav--container {
+        display: none;
+    }
+
+    .hidden {
+        display: none;
+    }
+
+    ul {
+        flex-direction: column;
+        margin-top: 50px;
+    }
+
+    ul a {
+        animation: menu__slide__down .3s ease-out;
+        animation-delay: .15s;
+        animation-fill-mode: forwards;
+    }
+
+    @keyframes menu__slide__down {
+        from {
+            margin-top: Opx
+        }
+
+        to {
+            margin-top: 50px
+        }
+    }
+
+    .menu--open {
+        display: flex;
+        flex-flow: column;
+        justify-content: flex-start;
+        transform: translateY(10%);
+    }
+
+    .menu__el {
+        margin-bottom: 50px;
+        max-width: 50vw;
+        max-height: 50vh;
+    }
+
+    .body--open {
+        background-color: #242424;
+    }
+
+    .burger {
+        width: 40px;
+        height: 40px;
+        display: block;
+        background-image: url(img/menu.png);
+        background-repeat: no-repeat;
+        background-size: contain;
+        padding: 0;
+        background-color: transparent;
+        border: none;
+        text-indent: 100%;
+        white-space: nowrap;
+        overflow: hidden;
+        cursor: pointer;
+        position: absolute;
+        top: 20px;
+        right: 20px;
+        z-index: 15;
+        transition: ease-in-out .4s;
+    }
+
+    .burger:hover {
+        
+        background-color: white;
+        
+    }
+}
